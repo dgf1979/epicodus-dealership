@@ -53,5 +53,6 @@ get('/dealerships/new') do
 end
 
 get('/dealership/:id') do
+  @dealership = Dealership.find(params.fetch('id'))
   erb(:dealership)
 end
