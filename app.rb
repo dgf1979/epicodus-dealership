@@ -35,6 +35,7 @@ end
 
 #list all dealerships
 get('/dealerships') do
+  @dealerships = Dealership.all()
   erb(:dealerships)
 end
 
@@ -54,5 +55,21 @@ end
 
 get('/dealership/:id') do
   @dealership = Dealership.find(params.fetch('id'))
+  erb(:dealership)
+end
+
+#add a new car to a specific dealership
+get('/dealership/:id/vehicle/new') do
+  @dealership = Dealership.find(params.fetch('id'))
+  erb(:dealership_vehicles_form)
+end
+
+post('/dealership/:id') do
+  make = params.fetch('make')
+  model = params.fetch('model')
+  year = params.fetch('year')
+  vehicle = Vehicle.new(make, model, year)
+  @dealership = Dealership.find(params.fetch('id'))
+  @dealership.add_vehicle(vehicle)
   erb(:dealership)
 end
