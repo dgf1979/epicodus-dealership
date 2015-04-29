@@ -8,6 +8,10 @@ get('/') do
   erb(:index)
 end
 
+get('/vehicle/:id') do
+  erb(:vehicle)
+end
+
 get('/vehicles') do
   @vehicles = Vehicle.all()
   erb(:vehicles)

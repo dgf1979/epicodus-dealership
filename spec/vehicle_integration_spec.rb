@@ -17,4 +17,14 @@ describe('the vehicles path', {:type => :feature}) do
     click_button('Add Vehicle')
     expect(page).to have_content("Skylark")
   end
+
+  it('adds a vehicle and verifies that it exists individually by id') do
+    visit('vehicles/new')
+    fill_in('make', :with => 'Buick')
+    fill_in('model', :with => 'Skylark')
+    fill_in('year', :with => '1970')
+    click_button('Add Vehicle')
+    visit('vehicle/1')
+    expect(page).to have_content("Skylark")
+  end
 end
