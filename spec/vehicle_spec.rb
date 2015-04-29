@@ -1,9 +1,6 @@
 require('rspec')
 require('vehicle')
 
-require('rspec')
-require('vehicle')
-
 describe(Vehicle) do
   before() do
     Vehicle.clear()
