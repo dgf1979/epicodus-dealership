@@ -1,22 +1,23 @@
-## [APPNAME] ##
+## Dealership ##
 
 This application is meant to fulfill the requirements of an assignment through Epicodus code school. For more information on Epicodus, see <http://www.epicodus.com/>.
 
 ### Description ###
 
-[simple app description]
+web site that tracks cars for various dealerships
 
-**Assignment:** [assignment title]
+**Assignment:** Dealerships
 
 **<https://www.learnhowtoprogram.com/table-of-contents>**
 
 ### Author(s) ###
 
-Andrew Finstrom & KEvin
+Andrew Finstrom & Kevin Chen
 
 ### Setup ###
 ```
-    setup code or details here
+    bundle
+    ruby app.rb
 ```
 
 ### License ###
