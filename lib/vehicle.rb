@@ -1,3 +1,5 @@
+require('pry')
+
 class Vehicle
   @@vehicles = []
 
@@ -42,6 +44,6 @@ class Vehicle
   end
 
   define_method(:id) do
-    @@vehicles.length
+    return @@vehicles.length
   end
 end

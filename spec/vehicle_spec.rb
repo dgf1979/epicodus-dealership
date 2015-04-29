@@ -71,6 +71,7 @@ describe("#save") do
 
   describe("#id") do
     it("returns the id of the vehicle") do
+      Vehicle.clear()
       test_vehicle = Vehicle.new("Toyota", "Prius", 2000)
       test_vehicle.save()
       expect(test_vehicle.id()).to(eq(1))
