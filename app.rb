@@ -9,6 +9,7 @@ get('/') do
 end
 
 get('/vehicle/:id') do
+  @vehicle = Vehicle.find(params.fetch('id'))
   erb(:vehicle)
 end
 
