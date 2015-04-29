@@ -50,7 +50,7 @@ class Vehicle
 
   define_singleton_method(:find) do |id|
     @@vehicles.each() do |vehicle|
-      if vehicle.id() == id
+      if vehicle.id() == id.to_i()
         return vehicle
       end
     end
