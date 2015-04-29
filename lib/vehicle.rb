@@ -42,6 +42,6 @@ class Vehicle
   end
 
   define_method(:id) do
-
+    @@vehicles.length
   end
 end
