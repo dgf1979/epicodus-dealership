@@ -31,3 +31,23 @@ end
 get('/vehicles/new') do
   erb(:vehicles_form)
 end
+
+#list all dealerships
+get('/dealerships') do
+  erb(:dealerships)
+end
+
+#submit a new dealership
+post('/dealerships') do
+
+  erb(:dealerships)
+end
+
+#add a new dealership
+get('/dealerships/new') do
+  erb(:dealerships_form)
+end
+
+get('/dealership') do
+  erb(:dealership)
+end
