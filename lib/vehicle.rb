@@ -40,4 +40,8 @@ class Vehicle
     american_cars = ["Chrysler", "Ford", "GM"]
     american_cars.include?(@make).&(self.age.<=(15))
   end
+
+  define_method(:id) do
+
+  end
 end
