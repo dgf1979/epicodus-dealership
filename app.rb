@@ -52,6 +52,6 @@ get('/dealerships/new') do
   erb(:dealerships_form)
 end
 
-get('/dealership') do
+get('/dealership/:id') do
   erb(:dealership)
 end

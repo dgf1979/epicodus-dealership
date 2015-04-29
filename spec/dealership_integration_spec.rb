@@ -16,4 +16,12 @@ describe("the dealership path", {:type => :feature}) do
     expect(page).to have_content("Bob's Discount Cars")
   end
 
+  it('adds a dealership and verifies that it exists individually by id') do
+    visit('/dealerships/new')
+    fill_in('name', :with => "Bob's Discount Cars")
+    click_button('Add Dealership')
+    visit('/dealership/1')
+    expect(page).to have_content("Bob's Discount Cars")
+  end
+
 end
