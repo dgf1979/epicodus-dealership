@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/vehicle')
+require('./lib/dealership')
 require('pry')
 
 get('/') do
@@ -39,7 +40,10 @@ end
 
 #submit a new dealership
 post('/dealerships') do
-
+  name = params.fetch('name')
+  dealership = Dealership.new(name)
+  dealership.save()
+  @dealerships = Dealership.all()
   erb(:dealerships)
 end
 
